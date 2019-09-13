@@ -30,7 +30,12 @@
     // Now we just wait for everything to execute, if the user is redirected to your custom app
     // the timeout below will never fire, if a custom app is not present (or the user is on the Desktop)
     // we will replace the current URL with the fallbackLink (store URL or desktop URL as appropriate)
-    window.setTimeout(function (){ window.location.replace(fallbackLink); }, 1);
+//     window.setTimeout(function (){ window.location.replace(fallbackLink); }, 1);
+      
+       setTimeout(function () { window.location = "https://play.google.com/store/apps/details?id=com.ookbee.joyapp.android"; }, 25);
+    window.location = " joylada://payment";
+//     For IOS:              https://itunes.apple.com/appdir/  *
+//     For ANDROID:  https://play.google.com/store/apps/ * 
     /*
       Q&A
       I have a native desktop app as well, how do I link to a custom protocol handler on the desktop?
@@ -38,5 +43,8 @@
         All Other Browsers: Use a custom plugin like iTunes does: http://ax.itunes.apple.com/detection/itmsCheck.js
     */
   })();</script>
+  
+ 
+  
 </body>
 </html>
