@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>App Redirection V2</title>
-</head>
-<body>
-
-  <!-- iframe used for attempting to load a custom protocol -->
-  <iframe style="display:none" height="0" width="0" id="loader"></iframe>
-       setTimeout(function () { 
+  <script>
+  setTimeout(function () { 
          window.location = "https://apps.apple.com/th/app/joylada/id1250405456";
        }, 2000);
       
     window.location = " joylada://coin";
-  })();</script>
+  </script>
+</head>
+<body>
+
+  <!-- iframe used for attempting to load a custom protocol -->
+ 
   
  
   
