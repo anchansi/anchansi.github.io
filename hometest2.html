@@ -41,7 +41,40 @@
 <body>
 
   <!-- iframe used for attempting to load a custom protocol -->
- 
+ <script>
+    $(document).ready(function () {
+        // window.location = " joylada://coin/dtac";
+        window.location.href = "joylada://coin/dtac";
+        setTimeout(function () {
+            var mobileos = getMobileOperatingSystem();
+            if (mobileos == "Android") {
+                window.location.href = "market://details?id=com.ookbee.joyapp.android";
+            }
+            else if (mobileos == "iOS") {
+                window.location.href = "itms-apps://itunes.apple.com/us/app/id1250405456";
+            }
+        }, 300);
+    });
+
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent)) {
+            return "Windows Phone";
+        }
+
+        if (/android/i.test(userAgent)) {
+            return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return "iOS";
+        }
+
+        return "unknown";
+    }
+
+</script>
   
  
   
