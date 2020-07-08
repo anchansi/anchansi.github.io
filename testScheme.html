@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+ 
+</ul>
+
+<p>ใส่ scheme url จ้าจ้าจ้า้า</p>
+Scheme: <input type="text" id="myUrlScheme" value="">
+<button onclick="myFunction()">กดสิ</button>
+<p>
+
+<script>
+function myFunction() {
+	var p = document.createElement("p");
+  var node = document.createElement("a");
+  var textnode = document.createTextNode(document.getElementById("myUrlScheme").value);
+  node.appendChild(textnode);
+  node.href = document.getElementById("myUrlScheme").value;
+  node.appendChild(p);
+  document.body.appendChild(node);
+}
+</script>
+
+</body>
+</html>
