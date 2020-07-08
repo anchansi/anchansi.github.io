@@ -13,12 +13,12 @@ Scheme: <input type="text" id="myUrlScheme" value="">
 
 <script>
 function myFunction() {
-  var paragraph = document.createElement("p");
+  var p = document.createElement("p");
   var node = document.createElement("a");
   var textnode = document.createTextNode(document.getElementById("myUrlScheme").value);
   node.appendChild(textnode);
   node.href = document.getElementById("myUrlScheme").value;
-  node.appendChild(paragraph);
+  node.appendChild(p);
   document.body.appendChild(node);
 }
 </script>
