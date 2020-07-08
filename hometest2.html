@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-
-    $('#button').click(function(e) {  
-        var inputvalue = $("#input").val();
-        window.location.replace(" http://www.example.com/page/"+inputvalue);
-
-    });
-});
-</script> 
-  
-  </head>
 <body>
-  
- 
-   <input type="text" value="11" id="input"> 
-       <button type="button" id="button">Click Me!</button>
-  <p> <p>
- 
-   
-  </body>
+
+<p>Click the button to display a string as a hyperlink.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "Free Web Building Tutorials!";
+  var result = str.link("https://www.w3schools.com");
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
 </html>
