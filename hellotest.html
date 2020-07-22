@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+
+let matched = window.matchMedia('prefers-color-scheme: dark').matches;
+
+if(matched)
+	alert('Dark Mode');
+else
+	alert('Light Mode');
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+
+
+</body>
+</html>
